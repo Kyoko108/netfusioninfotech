@@ -78,7 +78,7 @@ const [passwordShown, setPasswordShown] = useState(false);
       </button>
         <br/>
         <span>Already have an account? </span> 
-          <Link to='/'>LogIn</Link>
+          <Link to='/login'>LogIn</Link>
         </center>
     </div>
   );
