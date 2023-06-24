@@ -7,15 +7,16 @@ const eye = <FontAwesomeIcon icon={faEye} />;
 
 const Login = () => {
 
-   const [passwordShown, setPasswordShown] = useState(false);
-  const togglePasswordVisiblity = () => {
-    setPasswordShown(passwordShown ? false : true);
+     const [passwordShown, setPasswordShown] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordShown(!passwordShown);
   };
 
   const { register, handleSubmit } = useForm();
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     console.log(data);
   };
+
 
   return (
     <div className='container mt-sm-4'>
@@ -28,7 +29,7 @@ const Login = () => {
         <label>Password </label> &nbsp;
         <input  placeholder='Enter Password...' type={passwordShown ? "text" : "password"}
         {...register('Password',{ required: "This is required." })} />
-         <i onClick={togglePasswordVisiblity}>{eye}</i>{" "}
+         <i onClick={togglePasswordVisibility}>{eye}</i>{" "}
         <br/>
         <br/>
        <button type="submit" onClick={handleSubmit(onSubmit)}>
@@ -36,7 +37,7 @@ const Login = () => {
       </button>
         <br/>
         <span>Don't have an account? </span> 
-          <Link to='../src/Signup'>Signup</Link>
+          <Link to='/signup'>Signup</Link>
         </center>
     </div>
   )
