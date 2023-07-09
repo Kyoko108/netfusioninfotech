@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "../components/navbar.components";
 const eye = <FontAwesomeIcon icon={faEye} />;
 
 const Login = () => {
@@ -21,6 +22,8 @@ const Login = () => {
   return (
     <div className='container mt-sm-4'>
         <center>
+
+          <Navbar/>
         <br/>
         <label>User ID </label> &nbsp;
         <input type='text' placeholder='Enter Username...' />

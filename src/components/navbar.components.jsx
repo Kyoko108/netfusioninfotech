@@ -1,61 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React  from "react";
-import { Menu,Transition,Tab } from "@headlessui/react";
-import { Fragment } from "react";
+import React , { Fragment }  from "react";
+
 import Marquee from "react-fast-marquee";
 
 
-const aboutus = [
-  { href: '/Don Bosco School', label: 'Don Bosco School' },
-  { href: '/Aim,Vision&Mission', label: 'Aim,Vision & Mission ' },
-  { href: '/Don Bosco', label: 'Don Bosco' },
-  
-]
 
-const school = [
-  { href: '/Facilities', label: 'Facilities' },
-  { href: '/Curriculum', label: 'Curriculum ' },
-  { href: '/Co-Curriculum', label: 'Co-Curriculum' },
-  { href: '/Syllabus', label: 'Syllabus' },
-  { href: '/Prospectus', label: 'Prospectus' },
-]
-
-const staff = [
-  { href: '/Salesians', label: 'Salesians' },
-  { href: '/JuniorSectionTeachers', label: 'Junior Section Taechers ' },
-  { href: '/SeniorSectionTeachers', label: 'Senior Section Teachers' },
-  { href: '/NonTeachingStaff', label: 'Non-Teaching Staff' },
-]
-
-const noticeboard = [
-  { href: '/juniorsection', label: 'Junior Section' },
-  { href: '/seniorsection', label: 'Senior Section' },
-  
-]
-
-const gallery = [
-  { href: '/ImageGallery', label: 'Image Gallery' },
-  { href: '/VideoGallery', label: 'Video Gallery' },
-]
-
-const contact = [
-  { href: '/Login', label: 'Login' },
-  { href: '/Signup', label: 'Signup' },
-]
-
-
-const  Navbar = () => {
+ const Navbar = () => {
  
     return (
       
       <>
-    <div
-  
->
-      <Marquee className="relative  bg-gradient-to-bl  from-yellow-500
-    via-red-500
-    to-blue-500
-    background-animate text-black" onMouseOver="this.stop()" onMouseOut="this.start()" >
+    <div>
+      <Marquee className="relative text-black bg-gradient-to-bl from-yellow-500 via-red-500 to-blue-500 background-animate" onMouseOver="this.stop()" onMouseOut="this.start()" >
         ADMISSION NOTICE FOR KINDERGARTEN(KG) AND CLASS 1 FOR 2026-24, PLEASE CHECK ADMISSION SECTION****** ISC-2022-ISSUE OF DOCUMENTS, KINDLY CHECK WEBSITE NOTICE BOARD****FEES CAN BE PAID ON ANY DAY BETWEEN 5TH AND 20TH OF EVERY MONTH.
         </Marquee>
        
@@ -66,299 +22,140 @@ const  Navbar = () => {
       <br/>
       
       &nbsp;
-      <Tab.Group >
-        <Tab.List className="   flex space-x-0.5 rounded-xl bg-blue-900/20 p-1 bg-gradient-to-tr
+      <div className="navbar bg-base-100  flex space-x-0.5 rounded-xl bg-blue-900/20 p-1 bg-gradient-to-tr
     from-pink-500
     via-red-400
     to-blue-500
     background-animate shadow-lg">
-        <Tab className="margin-3 px-4 py-2 text-md font-medium leading-5 text-gray-700 transition duration-450 ease-in-out   hover:text-gray-500 focus:outline-none focus:border-blue-600 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
-        Home</Tab>
-      
-        <div className = "flex items-center justify-center p-6">
-          <div className="relative inline-block text-left">
-       <Menu >
-          {({ open }) => (
-        <>
-      <span className="rounded-md shadow-sm">
-      <Menu.Button className="inline-block overflow-y w-full px-4 py-2 text-md font-medium leading-5 text-gray-700 transition duration-450 ease-in-out   hover:text-gray-500 focus:outline-none focus:border-blue-600 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
-                  <span>AboutUs</span>
-                  
-                </Menu.Button>
-                </span>
-      <Transition
-       show={open}
-        enter="transition duration-100 ease-out"
-        enterFrom="transform scale-95 opacity-0"
-        enterTo="transform scale-95 opacity-100"
-        leave="transition duration-75 ease-out"
-        leaveFrom="transform scale-100 opacity-100"
-        leaveTo="transform scale-95 opacity-0"
-      ></Transition>
-      <Menu.Items  className=" right-100 w-50 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
-        {aboutus.map((link) => (
-          /* Use the `active` state to conditionally style the active item. */
-          <Menu.Item key={link.href} as={Fragment}>
-            {({ active }) => (
-              <a
-                          href={link.href}
-                          className={`${
-                            active
-                              ? "bg-red-100 text-gray-900"
-                              : "text-gray-700"
-                          } flex justify-between w-full px-4 py-2 text-md leading-5 text-left`}
-                        >
-                {link.label}<br/>
-              </a>
-            )}
-          </Menu.Item>
-        ))}
-      </Menu.Items> 
-  </>
-      )}
-      </Menu>
-      </div>
-      </div>
-  <div className = "flex items-center justify-center p-9">
-    <div className="relative inline-block text-left">
-       <Menu>
-          {({ open }) => (
-        <>
-      <span className="rounded-md shadow-sm">
-      <Menu.Button className="inline-block overflow-y w-full px-4 py-2 text-md font-medium leading-5 text-gray-700 transition duration-450 ease-in-out   hover:text-gray-500 focus:outline-none focus:border-blue-600 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
-                  <span>School</span>
-                  
-                </Menu.Button>
-                </span>
-      <Transition
-       show={open}
-        enter="transition duration-500 ease-out"
-        enterFrom="transform scale-500 opacity-0"
-        enterTo="transform scale-500 opacity-100"
-        leave="transition duration-575 ease-out"
-        leaveFrom="transform scale-500 opacity-100"
-        leaveTo="transform scale-500 opacity-0"
-      ></Transition>
-      <Menu.Items  className=" right-100 w-50 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
-        {school.map((link) => (
-          /* Use the `active` state to conditionally style the active item. */
-          <Menu.Item key={link.href} as={Fragment}>
-            {({ active }) => (
-              <a
-                          href={link.href}
-                          className={`${
-                            active
-                              ? "bg-blue-100 text-gray-900"
-                              : "text-gray-700"
-                          } flex  w-full px-4 py-2 text-md leading-5 text-left`}
-                        >
-                {link.label}<br/>
-              </a>
-            )}
-          </Menu.Item>
-        ))}
-      </Menu.Items> 
-  </>
-      )}
-      </Menu>
-      </div>
-      </div>
-      
-
-  <div className = "flex items-center justify-center p-9">
-    <div className="relative inline-block text-left">
-       <Menu >
-          {({ open }) => (
-        <>
-         <span className="rounded-md shadow-sm">
-      <Menu.Button className="inline-block overflow-y w-full px-4 py-2 text-md font-medium leading-5 text-gray-700 transition duration-450 ease-in-out   hover:text-gray-500 focus:outline-none focus:border-blue-600 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
-                  <span>Staff</span>
-                  
-                </Menu.Button>
-                </span>
-      <Transition
-       show={open}
-        enter="transition duration-5000 ease-out"
-        enterFrom="transform scale-500 opacity-0"
-        enterTo="transform scale-500 opacity-100"
-        leave="transition duration-5000 ease-out"
-        leaveFrom="transform scale-500 opacity-100"
-        leaveTo="transform scale-500 opacity-0"
-      ></Transition>
-      <Menu.Items  className=" right-100 w-50 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
-        {staff.map((link) => (
-          /* Use the `active` state to conditionally style the active item. */
-          <Menu.Item key={link.href} as={Fragment}>
-            {({ active }) => (
-              <a
-                          href={link.href}
-                          className={`${
-                            active
-                              ? "bg-green-100 text-gray-900"
-                              : "text-gray-700"
-                          } flex  w-full px-4 py-2 text-md leading-5 text-left`}
-                        >
-                {link.label}<br/>
-              </a>
-            )}
-          </Menu.Item>
-        ))}
-      </Menu.Items> 
-  </>
-      )}
-      </Menu>
-      </div>
-      </div>
-
-
-      
-        <div className = "flex items-center justify-center p-9">
-          <div className="relative inline-block text-left">
-       <Menu >
-          {({ open }) => (
-        <>
-        <span className="rounded-md shadow-sm">
-      <Menu.Button className="inline-block overflow-y w-full px-4 py-2 text-md font-medium leading-5 text-gray-700 transition duration-450 ease-in-out  hover:text-gray-500 focus:outline-none focus:border-blue-600 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
-                  <span>NoticeBoard</span>
-                  
-                </Menu.Button>
-                </span>
-      <Transition
-       show={open}
-        enter="transition duration-500 ease-out"
-        enterFrom="transform scale-500 opacity-0"
-        enterTo="transform scale-500 opacity-100"
-        leave="transition duration-575 ease-out"
-        leaveFrom="transform scale-500 opacity-100"
-        leaveTo="transform scale-500 opacity-0"
-      ></Transition>
-      <Menu.Items className=" right-100 w-50 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
-        {noticeboard.map((link) => (
-          /* Use the `active` state to conditionally style the active item. */
-          <Menu.Item key={link.href} as={Fragment}>
-            {({ active }) => (
-              <a
-                          href={link.href}
-                          className={`${
-                            active
-                              ? "bg-yellow-100 text-gray-900"
-                              : "text-gray-700"
-                          } flex  w-full px-4 py-2 text-md leading-5 text-left`}
-                        >
-                {link.label}<br/>
-              </a>
-            )}
-          </Menu.Item>
-        ))}
-      </Menu.Items> 
-  </>
-      )}
-      </Menu>
-      </div>
-      </div>
-      
-      <Tab className=" px-4 py-2 text-md font-medium leading-5 text-gray-700 transition duration-450 ease-in-out   hover:text-gray-500 focus:outline-none focus:border-blue-600 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
-        Admission</Tab>
-
-      <Tab className=" px-4 py-2 text-md font-medium leading-5 text-gray-700 transition duration-450 ease-in-out  hover:text-gray-500 focus:outline-none focus:border-blue-600 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
-        Fees Payment
-      </Tab>
-&nbsp;&nbsp;&nbsp;
-    
-        <div className = "flex items-center justify-center p-9">
-          <div className="relative inline-block text-left">
-       <Menu >
-          {({ open }) => (
-        <>
-      <Menu.Button className="inline-block overflow-y w-full px-4 py-2 text-md font-medium leading-5 text-gray-700 transition duration-450 ease-in-out  hover:text-gray-500 focus:outline-none focus:border-blue-600 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
-                  <span>Gallery</span>
-                  
-                </Menu.Button>
-      <Transition
-       show={open}
-        enter="transition duration-500 ease-out"
-        enterFrom="transform scale-500 opacity-0"
-        enterTo="transform scale-500 opacity-100"
-        leave="transition duration-575 ease-out"
-        leaveFrom="transform scale-500 opacity-100"
-        leaveTo="transform scale-500 opacity-0"
-      ></Transition>
-      <Menu.Items   className="right-100 w-50 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
-        {gallery.map((link) => (
-          /* Use the `active` state to conditionally style the active item. */
-          <Menu.Item  key={link.href} as={Fragment}>
-            {({ active }) => (
-              <a
-                          href={link.href}
-                          className={`${
-                            active
-                              ? "bg-blue-100 text-gray-900"
-                              : "text-gray-700"
-                          } flex  w-full px-4 py-2 text-md leading-5 text-left`}
-                        >
-                {link.label}<br/>
-              </a>
-            )}
-          </Menu.Item>
-        ))}
-      </Menu.Items> 
-  </>
-      )}
-      </Menu>
-      </div>
+  <div className="navbar-start">
+    <div className="dropdown">
+      <label tabIndex={0} className="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base-100">
+          <li>
+          <a className="text-base-100">About Us</a>
+          <ul className="p-2">
+            <li><a>NetFusionInfotech</a></li>
+            <li><a>Aim Vision and Mission </a></li>
+            <li><a>Achievements </a></li>
+          </ul>
+        </li>
+        <li>
+          <a className="text-base-100">School</a>
+          <ul className="p-2">
+            <li><a>Facilities</a></li>
+            <li><a>Curriculum </a></li>
+            <li><a>Cocurriculum </a></li>
+            <li><a>Syllabus </a></li>
+            <li><a>Prospectus </a></li>
+          </ul>
+        </li>
+        <li>
+          <a className="text-base-100">Staff</a>
+          <ul className="p-2">
+            <li><a>Teachers</a></li>
+            <li><a>Non Teaching Staff </a></li>
+            </ul>
+        </li>
+        <li>
+          <a className="text-base-100">Notice Board</a>
+          <ul className="p-2">
+            <li><a>Junior Section </a></li>
+            <li><a>Senior Section  </a></li>
+            
+          </ul>
+        </li>
+        <li>
+          <a className="text-base-100">Admission</a>
+        </li>
+        <li>
+          <a className="text-base-100">Fees Payment</a>
+        </li>
+        <li>
+          <a className="text-base-100">Gallery </a>
+        </li>
+        <li>
+          <a>Profile</a>
+          <ul className="p-2">
+          <li><a href = '/Login'>Login</a></li>
+            <li><a href = '/Signup' >Signup </a></li>
+            <li><a>Contacts </a></li></ul>
+        </li>
+      </ul>
     </div>
-    
-      <div className = "flex items-center justify-center p-6">
-          <div className="relative inline-block text-left">
-       <Menu >
-          {({ open }) => (
-        <>
-      <span className="rounded-md shadow-sm">
-      <Menu.Button className="inline-block overflow-y w-full px-4 py-2 text-md font-medium leading-5 text-gray-700 transition duration-450 ease-in-out   hover:text-gray-500 focus:outline-none focus:border-blue-600 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
-                  <span>Contact</span>
-                  
-                </Menu.Button>
-                </span>
-      <Transition
-       show={open}
-        enter="transition duration-100 ease-out"
-        enterFrom="transform scale-95 opacity-0"
-        enterTo="transform scale-95 opacity-100"
-        leave="transition duration-75 ease-out"
-        leaveFrom="transform scale-100 opacity-100"
-        leaveTo="transform scale-95 opacity-0"
-      ></Transition>
-      <Menu.Items  className=" right-100 w-50 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
-        {contact.map((link) => (
-          /* Use the `active` state to conditionally style the active item. */
-          <Menu.Item key={link.href} as={Fragment}>
-            {({ active }) => (
-              <a
-                          href={link.href}
-                          className={`${
-                            active
-                              ? "bg-red-100 text-gray-900"
-                              : "text-gray-700"
-                          } flex justify-between w-full px-4 py-2 text-md leading-5 text-left`}
-                        >
-                {link.label}<br/>
-              </a>
-            )}
-          </Menu.Item>
-        ))}
-      </Menu.Items> 
-  </>
-      )}
-      </Menu>
-      </div>
-      </div>
-</Tab.List>
-   </Tab.Group>
+    <a className="text-xl normal-case btn btn-ghost text-base-100" href="/">Home</a>
+  </div>
+  <div className="hidden navbar-center lg:flex">
+    <ul className="px-1 menu menu-horizontal">
+      <li tabIndex={0}>
+        <details>
+          <summary className="text-base-100">AboutUs</summary>
+          <ul className="p-2">
+            <li><a>NetFusionInfotech</a></li>
+            <li><a>Aim Vision and Mission </a></li>
+            <li><a>Achievements </a></li>
+          </ul>
+        </details>
+      </li>
+      <li tabIndex={1}>
+        <details>
+          <summary className="text-base-100">School</summary>
+          <ul className="p-2">
+             <li><a>Facilities</a></li>
+            <li><a>Curriculum </a></li>
+            <li><a>Cocurriculum </a></li>
+            <li><a>Syllabus </a></li>
+            <li><a>Prospectus </a></li>
+          </ul>
+        </details>
+      </li>
+      <li tabIndex={2}>
+        <details>
+          <summary className="text-base-100">Staff</summary>
+          <ul className="p-2">
+            <li><a>Teachers</a></li>
+            <li><a>Non Teaching Staff </a></li>
+          </ul>
+        </details>
+      </li>
+      <li tabIndex={3}>
+        <details>
+          <summary className="text-base-100">Notice Board</summary>
+          <ul className="p-2">
+            <li><a>Junior Section </a></li>
+            <li><a>Senior Section  </a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+          <a className="text-base-100">Admission</a>
+        </li>
+        <li>
+          <a className="text-base-100">Fees Payment</a>
+        </li>
+        <li>
+          <a className="text-base-100">Gallery </a>
+        </li>
+        <li tabIndex={0}>
+        <details>
+          <summary className="text-base-100">Profile</summary>
+          <ul className="p-2">
+            <li><a href = '/Login'>Login</a></li>
+            <li><a href = '/Signup' >Signup </a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+  <div className="navbar-end">
+    <a className="btn btn-accent btn-outline text-base-100">Contact</a>
+  </div>
+</div>
  </div>
     </>
     
     
     );
 }
-
 export default Navbar;

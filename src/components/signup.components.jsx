@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+import Navbar from '../components/navbar.components';
 const eye = <FontAwesomeIcon icon={faEye} />;
 
 
@@ -43,16 +44,17 @@ const [passwordShown, setPasswordShown] = useState(false);
   };
 
   return (
-    <div className='container  mt-sm-4'>
+    <div className='container mt-sm-4'>
         <center>
+          <Navbar/>
         <br/>
         <label>User ID</label>&nbsp;&nbsp;&nbsp;
         <input type='text' placeholder='Enter Username...'value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => setUsername(e.target.value)}  className='text-base-100'
         />
         <br/>
         <br/>
-        <label>Password</label>&nbsp;&nbsp;&nbsp;
+        <label >Password</label>&nbsp;&nbsp;&nbsp;
          {/* <View>
           <TextInput placeholder="Enter your password " autocorrect={false} secureTextEntry={true} textContentType = 'password'/>
           <FaToggleOn style = {{
@@ -62,7 +64,7 @@ const [passwordShown, setPasswordShown] = useState(false);
          </View> */}
         <input  placeholder='Enter Password...'type={passwordShown ? "text" : "password"}
         {...register('Password',{ required: "This is required." })} value={password}
-          onChange={(e) => setPassword(e.target.value)} />
+          onChange={(e) => setPassword(e.target.value)} className='text-base-100'/>
          <i onClick={togglePasswordVisiblity}>{eye}</i>{" "}
         <br/>
         <br/>
@@ -78,7 +80,7 @@ const [passwordShown, setPasswordShown] = useState(false);
       </button>
         <br/>
         <span>Already have an account? </span> 
-          <Link to='/login'>LogIn</Link>
+          <Link to='/Login'>LogIn</Link>
         </center>
     </div>
   );
