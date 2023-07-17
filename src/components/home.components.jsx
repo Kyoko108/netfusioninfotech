@@ -9,7 +9,8 @@ const Home = () => {
         
       
       <h1>Welcome to the Home Page</h1>
-      <p data-theme ="retro">
+      <div data-theme ="retro">
+      <p >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed metus tellus. Proin vitae ex sit amet quam rutrum viverra nec vitae eros. In tempor accumsan semper. Maecenas vel risus placerat turpis condimentum tempus. Duis iaculis neque ut orci efficitur hendrerit. Integer ornare mauris non sapien scelerisque, eu sodales turpis efficitur. Nulla dictum leo sed diam pharetra, lobortis dapibus libero tempor. In fringilla magna a auctor varius. Duis et porttitor massa. Etiam placerat auctor nunc, in ornare ipsum rutrum et. Proin ultricies lacus ut libero imperdiet, vitae suscipit metus varius. Morbi sed laoreet felis. Cras hendrerit arcu purus, accumsan tristique magna vulputate non.
         Aenean in metus at massa venenatis porta quis in lectus. Sed consectetur neque a ante efficitur vulputate. Curabitur mattis orci a nisl ultrices maximus. Nulla tristique velit a ligula euismod mollis et vel metus. Donec ante neque, tristique elementum mollis non, egestas nec dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Aliquam erat volutpat. Maecenas a laoreet ipsum, fermentum dapibus odio. Mauris erat justo, tristique non eros at, convallis tempor libero.
         Sed bibendum rhoncus eros, sit amet dictum leo varius vitae. Mauris ex metus, maximus id mauris at, ornare ultricies neque. Nam elementum ex libero, id sollicitudin nisl rhoncus vel. Vivamus ac tincidunt nunc, in sollicitudin dolor. Pellentesque vitae tortor ac diam pellentesque tristique in vel mauris. Ut ac purus in velit dignissim eleifend. Nullam feugiat lobortis enim non rutrum.
@@ -137,6 +138,7 @@ const Home = () => {
         nunc commodo dolor, at lobortis erat metus vitae turpis. Morbi pretium
         lacus vel tellus tincidunt posuere.
       </p>
+      </div>
     </div>
   );
 };

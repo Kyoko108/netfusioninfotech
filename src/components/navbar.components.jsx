@@ -80,7 +80,7 @@ import Marquee from "react-fast-marquee";
           <ul className="p-2">
           <li><a href = '/Login'>Login</a></li>
             <li><a href = '/Signup' >Signup </a></li>
-            <li><a>Contacts </a></li></ul>
+            <li><a>MyProfile </a></li></ul>
         </li>
       </ul>
     </div>
@@ -143,13 +143,18 @@ import Marquee from "react-fast-marquee";
           <ul className="p-2">
             <li><a href = '/Login'>Login</a></li>
             <li><a href = '/Signup' >Signup </a></li>
+            <li><a>MyProfile </a></li>
           </ul>
         </details>
       </li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn btn-accent btn-outline text-base-100">Contact</a>
+    <a className="btn bg-gradient-to-tr
+    from-purple-500
+    via-red-400
+    to-blue-500
+    background-animate   text-base-100">Contact</a>
   </div>
 </div>
  </div>
